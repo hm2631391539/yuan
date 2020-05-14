@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="css/register.css">
+	</head>
+	<body>
+		<div id="">
+
+			<div id="loginbox">
+				<div id="login_left">
+					<p class="p">用户注册</p>
+
+					<form action="">
+						<ul>
+							<li>
+								<input type="text" id="username" placeholder="请输入您的Email/手机号">
+								<p id="ts" class="aa"></p>
+							</li>
+							<li>
+								<input type="text" placeholder="请输入密码" id="userpass">
+								<p id="ts" class="aa"></p>
+							</li>
+							<li>
+								<input type="text" placeholder="请确认密码">
+								<p id="ts" class="aa"></p>
+							</li>
+							<li>
+								<div id="mm">
+									<input type="text" placeholder="填写验证码" class="inp">
+									<div id="yanzheng"></div>
+									<p id="huan">看不清楚?换一个</p>
+								</div>
+								<p id="ts" class="aa"></p>
+							</li>
+						</ul>
+
+					</form>
+
+					<div id="dl">
+						<a href="">注&nbsp;&nbsp;&nbsp;&nbsp;册</a><div id="messageBox"></div>
+					</div>
+					
+
+				</div>
+
+				<div id="login_right">
+					<p>用户登录</p>
+					<div id="right_top">
+
+						<a href="login.html">快捷登录</a>
+						<a href="login.html">账号密码登录</a>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
+
+<!-- <script src="js/register.js"></script> -->
+<script src="js/yanzheng.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+
+
+
+function isTest(){
+	return isUserName() && isPass() && isUserpass() && yanzheng();
+	
+}
+//用户名
+function isUserName(){
+	//非空判断
+	if($("#username").val()==""){
+		return false;
+	}
+	//格式
+	// let reg=/(^1\d{10}$)|(^\w+@\w+\.(com|net|cn)/$);
+	let reg=/(^1\d{10}$)|(^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$)/;
+	if(!reg.test($("#username").val())){
+		return false;
+	}
+	//都正确
+	return true;
+}
+//密码
+function isPass(){
+	//非空判断
+	if($("#userpass").val()==""){
+		return false;
+	}
+	//格式
+	let reg=/^[a-zA-z0-9]{6,16}$/;
+	if(!reg.test($("#userpass").val())){
+		return false;
+	}
+	//都正确
+	return true;
+}
+//确定密码
+function isUserpass(){
+	//非空判断
+	if($("input:eq(2)").val()==""){
+		return false;
+	}
+	//格式
+	if($("input:eq(2)").val()!=$("input:eq(1)").val()){
+		return false;
+	}
+	return true;
+}
+//验证
+function yanzheng(){
+	if($("input:eq(3)").val()==""){
+		return false;
+	}
+	if($("input:eq(3)").val()!=$("#yanzheng").html()){
+		return false;
+	}
+	return true;
+}	
+	
+let hasUser = false;//该用户名不存在
+function hasUserBack(){
+	//后端验证用户名是否存在
+	$.get("checkUser.php",{"username":$("#username").val()},function(data){
+		if(data=="0"){
+			$(".aa:eq(0)").html("亲，该用户名已经存在，请重新思考！");
+			$(".aa:eq(0)").css({"color":"red"});
+			hasUser = true;
+		}else{
+			$(".aa:eq(0)").html("亲，该用户名可以使用，赶紧注册吧！");
+			$(".aa:eq(0)").css({"color":"green"});
+			hasUser = false;
+		}
+	})
+}
+
+
+//注册时
+$(function(){		
+		$("#username").blur(function(){
+			//1、前端验证
+			if(isUserName()==false){
+				$(".aa:eq(0)").html("亲，用户名的格式不正确！");
+				return;
+			}
+			//2、后端的验证
+			hasUserBack();
+		});	
+
+		$("#userpass").blur(function(){
+			//1、前端验证
+			if(isPass()==false){
+				$(".aa:eq(1)").html("亲，密码格式不正确	！");
+				return;
+			}else{
+				$(".aa:eq(1)").html("√");
+			}
+		});
+		
+		$("input:eq(2)").blur(function(){
+			//1、前端验证
+			if(isUserpass()==false){
+				$(".aa:eq(2)").html("亲，输入有误 ！");
+				return;
+			}else{
+				$(".aa:eq(2)").html("√");
+			}
+		});
+		
+		$("input:eq(3)").blur(function(){
+			//1、前端验证
+			if(yanzheng()==false){
+				$(".aa:eq(3)").html("亲，输入有误	！");
+				return;
+			}else{
+				$(".aa:eq(3)").html("√");
+			}
+		});
+
+		$("#dl").click(function(){
+			//1、前端验证
+			if(isTest()==false){
+				$("#messageBox").html("亲，您的信息输入不全");
+				return;
+			}
+			//2、用户名是否存在(后端验证)
+			if(hasUser){
+				return;
+			}		
+
+			$.post(
+				"addUser.php",
+				{
+					"username":$("#username").val(),
+					"userpass":$("#userpass").val()
+				},
+				function(data){
+					if(data=="success"){
+						$("#messageBox").css({"color":"green"});
+						$("#messageBox").html("恭喜您，注册成功！2秒后跳转到<a href='login.html'>登录</a>页面");
+						// alert("恭喜您，注册成功");
+						setTimeout(()=>{
+							location.href="login.html";
+						},2000);
+					}else if(data=="fail"){
+						$("#messageBox").css({"color":"red"});
+						$("#messageBox").html("不好意思，注册失败!");
+						// alert("不好意思，注册失败！");
+					}else{
+						$("#messageBox").css({"color":"red"});
+						$("#messageBox").html("不好意思，服务器出问题了!");
+						// alert("不好意思，服务器出问题了！");
+					}
+				}
+			);
+		});
+	});
+
+
+
+	
+	
+	
+	
+	// let dl = document.getElementById("dl");
+	// let ts = document.getElementById("ts");
+	// let ya=document.getElementById("yanzheng");
+	// let inp=document.getElementsByTagName("input");
+
+	// //验证用户名是否存在
+	// // function(){
+	// $("#username").addEventListener("blur", function() {
+	// 	let xhr = new XMLHttpRequest();
+	// 	xhr.open("get", "checKuser.php?username=" + this.value, true);
+	// 	// console.log(this.value);
+	// 	xhr.onreadystatechange = function() {
+	// 		if (xhr.readyState == 4 && xhr.status == 200) {
+	// 			if (xhr.responseText == "0") {
+	// 				console.log(xhr.responseText);
+	// 				// 用户名不存在可以注册
+	// 				// $("#ts").innerHTML="√";
+	// 				// alert("")
+	// 				$(".aa")[0].innerHTML=="输入有误";
+	// 				alert("此用户名已被注册");
+	// 			} else {
+	// 				console.log(xhr.responseText);
+	// 				// $(".name").innerHTML="×";
+	// 				// alert("此用户名已被注册");
+	// 			}
+	// 		}
+	// 	}
+	// 	xhr.send();
+	// });
+	
+	// //发请求注册
+	
+	// let aa=document.getElementsByClassName("aa");
+	// // console.log(aa);
+	// $("#dl").addEventListener("click",function(){
+	// 	if(aa[0].innerHTML=="输入正确" && aa[1].innerHTML=="输入正确" && aa[2].innerHTML=="输入正确" && aa[3].innerHTML=="输入正确"){
+			
+	// 		let xhr=new XMLHttpRequest();
+	// 		xhr.open("POST","reg.php",true);
+	// 		xhr.onreadystatechange=function(){
+	// 			if(xhr.readyState==4 && xhr.status==200){
+	// 				console.log(xhr.responseText);
+	// 				if( xhr.responseText=="1"){
+	// 					console.log(xhr.responseText);
+	// 					alert("注册成功");
+	// 					setTimeout(function(){
+	// 					    location.href="login.html";
+	// 					},2000);
+	// 				}else{
+	// 					alert("注册失败");
+	// 				}
+	// 			}
+	// 		}
+	// 		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	// 		let str="username="+$("#username").value+"&userpass="+$("#pass").value;
+	// 		xhr.send(str);
+	// 	}else{
+	// 		alert("输入有误");
+	// 	}
+		
+	// });
+	// function $(str) {
+	// 	if (str.charAt(0) == "#") {
+	// 		return document.getElementById(str.substring(1));
+	// 	} else if (str.charAt(0) == ".") {
+	// 		return document.getElementsByClassName(str.substring(1));
+	// 	} else {
+	// 		return document.getElementsByTagName(str);
+	// 	}
+	// }
+	
+	
+	
+	
+</script>

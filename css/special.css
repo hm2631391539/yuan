@@ -1,0 +1,65 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+	display:block;
+}
+
+
+#special{
+	width:100%;
+	/* overflow: hidden; */
+	font-size: 0;  /* 可以去掉a之间的默认距离 */
+} 
+#special a{
+	display: inline-block;
+	/* width: 100%; */
+}
+#special .speclals{
+	width: 100%;
+}
+#special .spec{
+	width: 50%;
+	float: left;
+}
+#special .specl{
+	width: 50%;
+	float: left;
+}
+
+#specials{
+	width: 100%;
+}
+#specials a{
+	width: 50%;
+}
+
+#special .specss{
+	width: 100%;
+	
+}
+#special .speclss{
+	width: 100%;
+	
+}
+
+#sp{
+	width: 100%;
+}
+#sp a{
+	width: 50%;
+}
+#sp img{
+	width: 100%;
+}

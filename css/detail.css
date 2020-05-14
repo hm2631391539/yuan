@@ -1,0 +1,516 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+	display:block;
+}
+
+#details{
+	width: 100%;
+	height: 50px;
+	/* background-color: #006600; */
+}
+#index{
+	width: 1250px;
+	height: 50px;
+	/* background-color: pink; */
+	margin: 0 auto;
+}
+#index a{
+	font-size: 12px;
+	color: #8B8B8B;
+	line-height: 50px;
+}
+/* 放大镜 */
+#fangdajing{
+	width: 100%;
+	height: 440px;
+	/* background-color: #0D3349; */
+	margin-bottom: 80px;
+}
+#fangdajings{
+	width: 1250px;
+	height: 440px;
+	/* background-color: #7FFFD4; */
+	margin: 0 auto;
+}
+#fangdajings #img{
+	width: 660px;
+	height: 440px;
+	float: left;
+}
+#img #bb{
+	width: 70px;
+	height: 70px;
+	float: left;
+	border: 1px solid #8B8B8B;
+	margin: 0 58px 0 90px;
+	
+}
+
+#fangdajings #img #max{
+	width: 70px;
+	height: 70px;
+	/* float: left; */
+	/* margin: 0 58px 0 92px; */
+}
+#img #bag{
+	width: 440px;
+	height: 440px;
+	float: left;
+	/* margin-left: ; */
+	position: relative;
+	/* background-image: url(../img/701e919.jpg); */
+	background-color: #0000FE;
+	background-size: 440px 440px;
+}
+#bag #min{
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	/* left: 10px;
+	top: 20px; */
+	opacity: 0.2;
+	background-color: #555555;
+	display: none;
+}
+#bag #mins{
+	position: absolute;
+	width: 550px;
+	height: 500px;
+	left: 450px;
+	top: 0px;
+	/* background-image: url(../img/701e919.jpg); */
+	background-size: 880px 880px;
+	display: none;
+	border:1px solid #8B8B8B;
+}
+/* 信息 */
+#xiang{
+	width: 440px;
+	height: 318px;
+	float: left;
+	margin-left: 55px;
+	padding-top: 50px;
+}
+#xiangs{
+	width: 440px;
+	height: 120px;
+	border-bottom: 1px solid #E5E5E5; 
+}
+#xiangs h2{
+	font-size: 22px;
+	color: #000000;
+	width: 440px;
+	height: 39px;
+	line-height: 39px;
+}
+#xiangs p{
+	width: 440px;
+	height: 25px;
+	color: #8B8B8B;
+	font-size: 14px;
+	line-height :39px;
+	margin-bottom: 10px;
+}
+/* #xiangs #strss span{
+	width: 12px;
+	height: 12px;
+	font-size: 12px;
+	display: inline-block;
+	background: url(../img/star.jpg) no-repeat;
+	margin-right: 5px;
+	background-size: 12px;
+} */
+#xiangs #strss{
+	/* width: ; */
+	/* background: #000000; */
+	width: 440px;
+	height: 16px;
+	padding-top: 8px;
+}
+#xiang #qing{
+	width: 440px;
+	height: 40px;
+	padding-top: 49px;
+	/* background-color: blue; */
+}
+#qing #jg{
+	font-size: 22px;
+	width: 110px;
+	height: 40px;
+	margin-right: 29px;
+	float: left;
+	line-height: 40px;
+}
+
+#qing #adds{
+	width: 90px; 
+	height: 38px;
+	float: left;
+	border: 1px solid #E5E5E5;
+	background-color: #FFFFFF;
+	text-align: center;
+	margin-right: 10px;
+}
+#qing #adds button{
+	display: block;
+	height: 38px;
+	width: 30px;
+	line-height: 40px;
+	border-color: #E5E5E5;
+	float: left;
+	outline: none;
+	border: none;
+	background-color: #FFFFFF;
+}
+#qing #adds button:hover{
+	background-color: #888888;
+}
+#qing #adds span{
+	display: block;
+	width: 30px;
+	height: 40px;
+	float: left;
+	line-height: 40px;
+}
+#qing #a{
+	display: block;
+	width: 140px;
+	height: 40px;
+	 background-color: #000000; 
+	color: #FFFFFF;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	line-height: 40px;
+}
+#xiang #bottom{
+	width: 440px;
+	height: 58px;
+	/* background: pink; */
+	margin-top: 50px;
+}
+#bottom #foot{
+	width: 110px;
+	height: 58px;
+	/* background-color: #440044; */
+	text-align: center;
+	font-size: 12px;
+	float: left;
+}
+
+#foot img{
+	width:44px;
+	height: 38px;
+	padding-left: 33px;
+}
+
+
+
+
+
+
+/* 吸顶 */
+#xidings{
+	width: 100%;
+	height: 40px;
+	/* background-color: #333333; */
+}
+#xiding{
+	width: 1250px;
+	height: 39px;
+	margin:0 auto;
+	/* background-color: pink; */
+	border-bottom: 1px solid #E5E5E5;
+}
+#xiding p{
+	float: left;
+	font-size: 14px;
+	color: #000000;
+	line-height: 39px;
+	margin-right: 320px;
+}
+#xiding a{
+	display: block;
+	float: left;
+	margin-right: 75px;
+	font-size: 14px;
+	color: #333333;
+	line-height: 39px;
+}
+#xiding a:nth-child(2){
+	border-bottom: 1px solid red;
+}
+
+#details_buttom{
+	width: 100%;
+	height: 6393px;
+	/* background-color: #440044; */
+}
+#detail{
+	width: 1250px;
+	height: 6393px;
+	/* background-color: #7FFFD4; */
+	margin: 0 auto;
+}
+/* 左边 */
+#detail_left{
+	width: 374px;
+	height: 532px;
+	/* background-color: #880000; */
+	float: left;
+}
+#left_img{
+	width:240px;
+	height: 373px;
+	/* background-color: #5E740B; */
+	padding: 59px 0px 0px;
+}
+#left_img img{
+	width: 240px;
+	height: 240px;
+	margin-bottom: 30px;
+}
+#left_img p{
+	height: 44px;
+	line-height: 22px;
+	font-size: 16px;
+	margin-bottom: 30px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+
+
+/* 右边 */
+#detail_right {
+	width: 876px;
+	height: 6383px;
+	/* background-color: #EE5757; */
+	float: left;
+	margin-top: 10px;
+}
+#right_img{
+	width: 876px;
+	height: 5248px;
+	/* background-color: #7FFF00; */
+}
+
+#product{
+	width: 876px;
+	/* height: 117px; */
+	overflow: hidden;
+	padding: 15px 0px 40px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#product h3{
+	color: #111;
+	height: 21px;
+	font-size: 14px;
+	font-weight: 400;
+}
+#product_clarins{
+	width: 876px;
+	height: 18px;
+	color: #555;
+	font-size: 12px;
+	padding: 10px 0px; 
+}
+#product_clarins span:nth-child(2){
+	color: #111111;
+}
+#product_block{
+	float: left;
+}
+#product_bl{
+	float: right;
+}
+#product_no{    /* 高度55 */
+	color: #000000;
+	font-size: 14px;   
+	display: none;
+}
+/* 评价 */
+#ping{
+	width: 876px;
+	height: 301px;
+	padding: 40px 0px 0px;
+}
+#ping #pingjia{
+	width: 876px;
+	height: 33px;
+	/* margin-bottom: 25px */
+}
+#pingjia span:nth-child(1){
+	font-size: 22px;
+	font-weight: 400;
+	/* height: 29px; */
+	float: left;
+}
+#pingjia span:nth-child(2){
+	float: right;
+	font-size: 12px;
+	color: #000000;
+}
+#jia{
+	width: 876px;
+	height: 97px;
+	font-size: 12px;
+	color: #000000;
+	padding: 20px 0px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#pingjias{
+	width: 876px;
+	height: 18px;
+}
+#jia #pingjias span:nth-child(1){
+	float: left;
+}
+#jia #pingjias span:nth-child(2){
+	float: right;
+}
+#str{
+	width: 876px;
+	height: 18px;
+	margin: 8px 0px 15px;
+}
+#str span{   /* 所有的星星都用这个 */
+	width: 12px;
+	height: 12px;
+	font-size: 12px;
+	display: inline-block;
+	background: url(../img/star.jpg) no-repeat;
+	margin-right: 5px;
+	background-size: 12px;
+}
+#jia p{
+	width: 876px;
+	height: 18px;
+	font-size: 12px;
+	color: #000000;
+	margin: 0px 0px 20px;
+}
+
+#qu{
+	width: 876px;
+	height: 40px;
+	margin: 50px 0px 0px;
+}
+#qu a{
+	display: block;
+	width: 140px;
+	height: 40px;
+	border: 1px solid #CBCBCB;
+	display: block;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+	margin: 0 auto;
+}
+
+/* 关联推荐 */
+#tuijian{
+	width: 876px;
+	height: 619px;
+	/* background-color: pink; */
+	margin-top: 49px;
+}
+#tuijian h2{
+	font-size: 22px;
+	color: #555555;
+}
+#tuijian #chanpin{
+	width: 876px;
+	height: 517px;
+	margin: 70px 0px 0px;
+	/* background-color: #5E740B; */
+	/* overflow: hidden; */
+}
+#chanpin img{
+	height: 240px;
+	width: 240px;
+}
+#miaoshu{
+	width: 240px;
+	height: 217px;
+	text-align: center;
+}
+#miaoshu p{
+	margin-top: 20px;
+	font-size: 14px;
+	color: #8B8B8B;
+	height: 21px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#miaoshu h3{
+	font-size: 16px;
+	line-height: 1.5em;
+	height: 3em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#xing{
+	width: 240px;
+	height: 33px;
+	/* background-color: #0000FE; */
+}
+#strs{
+	width: 114px;
+	height: 23px;
+	border-right: 1px solid #555555;
+	float: left;
+}
+#strs span{
+	width: 12px;
+	height: 12px;
+	font-size: 12px;
+	display: inline-block;
+	background: url(../img/star.jpg) no-repeat;
+	margin-right: 5px;
+	background-size: 12px;
+}
+#man{
+	width: 126;
+	height: 33px;
+	/* text-align: center; */
+}
+#ma{
+	margin-left: 30px;
+	font-size: 22px;
+	/* line-height: 33px; */
+	float: left;
+	
+}
+#add{
+	width: 130px;
+	height: 80px;
+	margin-top: 20px;
+	padding: 0px 55px;
+}
+#add a{
+	display: block;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+}
+
+

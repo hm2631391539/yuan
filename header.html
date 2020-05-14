@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/header.css">
+	</head>
+	<body>
+		<!-- height1 -->
+		<div id="header">
+			<div id="header_top">
+				<div id="header_left">
+					<a href="">查找专柜</a>
+					<a href="">美颜中心</a>
+					<a href="">选择娇韵诗</a>
+					<a href="">服务与帮助</a>
+				</div>
+				<div id="logo"><img src="img/46c041b.jpg" alt=""></div>
+				<div id="header_right">
+					<div id="header_search">
+						<input type="text" value="黄金双萃">
+						<img src="img/search.png" alt="">
+					</div>
+					<div id="header_center">
+						<img src="img/7ced9ee.png" alt="">
+						<a href="">登录</a>
+					</div>
+					<div id="header_good">
+						<img src="img/cart.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- height2	 -->
+		<div id="headers">
+			<div id="header_buttom">
+				<a href="">首页</a>
+				<a class="mianbu" href="" style="display: inline-block;">面部护理</a>
+				
+				<a href="">身体护理</a>
+				<a href="">准妈妈系列</a>
+				<a href="">彩妆系列</a>
+				<a href="">男士系列</a>
+				<a href="">礼品及套装</a>
+				<a href="">特别活动</a>
+				<a href="">明星商品</a>
+				<a href="">新品上线</a>
+				<a href="">会员俱乐部</a>
+				<a href="">美妆学院</a>
+				<a href="">CLARINS MAG</a>
+				
+			</div>
+			<div id="slip" style="display: none;">
+				<div id="slips">
+					<div id="slipser">
+						<ul>
+							<li><a href="">产品类型</a></li>
+							<li><a href="">清洁卸妆</a></li>
+							<li><a href="">化妆水/精华水</a></li>
+							<li><a href="">卓效精华</a></li>
+							<li><a href="">眼部护理</a></li>
+							<li><a href="">面霜/护理油</a></li>
+							<li><a href="">唇部颈部护理</a></li>
+							<li><a href="">面部</a></li>
+							<li><a href="">防晒隔离</a></li>
+						</ul>
+						<ul>
+							<li><a href="">选择系列</a></li>
+							<li><a href="">抗老·黄金赋活系列</a></li>
+							<li><a href="">抗老·青春赋活系列</a></li>
+							<li><a href="">抗老·焕颜弹力系列</a></li>
+							<li><a href="">抗老·花样年华系列</a></li>
+							<li><a href="">塑颜紧致</a></li>
+							<li><a href="">清透润白</a></li>
+							<li><a href="">基础清洁</a></li>
+							<li><a href="">沁润保湿</a></li>
+							<li><a href="">清透防晒</a></li>
+							<li><a href="">清爽雅致</a></li>
+						</ul>
+						<ul>
+							<li><a href="">美肌需求</a></li>
+							<li><a href="">抗老赋活</a></li>
+							<li><a href="">淡斑亮白</a></li>
+							<li><a href="">提拉V脸</a></li>
+							<li><a href="">补水保湿</a></li>
+							<li><a href="">控油/缩毛孔</a></li>
+							<li><a href="">滋润舒缓</a></li>
+							<li><a href="">防晒隔离</a></li>
+						</ul>
+					</div>
+					<div id="slipsers">
+						<ul>
+							<a href="">
+								<img src="img/fbe90ab.jpg" alt="">
+								<p>抗老复活系列</p>
+								<p>明星御领 焕活年轻</p>
+								<img src="img/lj.jpg" alt="">
+							</a>
+						</ul>
+						
+						<ul>
+							<a href="">
+								<img src="img/fbe90ab.jpg" alt="">
+								<p>抗老复活系列</p>
+								<p>明星御领 焕活年轻</p>
+								<img src="img/lj.jpg" alt="">
+							</a>
+						</ul>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(".mianbu").mouseover(function(){
+		$("#slip").css({"display":"block"})
+	})
+	$(".mianbu").mouseout(function(){
+		$("#slip").css({"display":"none"})
+	})
+	$("#slip").mousemove(function(){
+		$(this).css({"display":"block"})
+	})
+	$("#slip").mouseout(function(){
+		$(this).css({"display":"none"})
+	})
+</script>

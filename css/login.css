@@ -1,0 +1,179 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+	background-color: #8B8B8B;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+	display:block;
+}
+
+#loginbox{
+	padding: 60px;
+	width: 850px;
+	height: 600px;
+	background-color: #fff;
+	/* background-color: #7FFFD4; */
+	position: fixed;
+	left: 50%;
+	margin-left: -425px;
+	top: 50%;
+	margin-top: -300px;
+	box-sizing: border-box;
+}
+#login_left{
+	width:330px;
+	height: 469px;
+	/* background-color: #7FFF00; */
+	padding-right: 60px;
+	float: left;
+	border-right: #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+#login_left .p{
+	font-size: 22px;
+	color: #000000;
+	padding-bottom: 20px;
+}
+
+
+#login_left form{
+	margin-bottom: 50px;
+}
+
+
+ #login_left form input{
+	display: block;
+	width: 290px;
+	height: 40px;
+	padding: 0px 20px;
+	/* margin-bottom: 25px; */
+	outline: none;
+	border: #e5e5e5;
+	border: 1px solid #e5e5e5;
+}
+#login_left .inp{
+	width: 150px;
+	float: left; 
+}
+#login_left #mm{
+	width: 310px;
+}
+#mm input{
+	float: left;
+}
+#ts{
+	width: 290px;
+	height: 25px;
+	padding: 0 20px;
+	font-size: 10px;
+	line-height: 25px;
+}
+#mm div{
+	float: left;
+	width: 58px;
+	height: 40px;
+	font-size: 12px; 
+	background-color: #f3fbfe;
+}
+
+#yanzheng{
+	text-align: center;
+	line-height: 40px;
+	font-weight: 600;
+}
+
+
+#mm p{
+	float: left;
+	width: 58px;
+	font-size: 12px;
+	height: 40px;
+	padding-top: 3px;
+}
+
+#login_left p .wang{
+	display: block;
+	width: 60px;
+	height: 12px;
+	font-size: 12px;
+	color:#000000;
+	margin-left: 265px;
+	clear: both;
+}
+
+#dl{
+	width: 330px;
+	height: 40px;
+	background-color: #000000;
+	text-align: center;
+	margin-top: 20px;
+	
+}
+#dl a{
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 40px;
+}
+
+#login_right{
+	width: 278px;
+	height: 370px;
+	/* background-color: #0000FF; */
+	float: right;
+}
+
+#login_right p{
+	font-size: 22px;
+	color: #000000;
+	padding-bottom: 20px;
+}
+#right_top{
+	width: 278px;
+	height: 206px;
+	margin-top: 40px;
+	/* background-color: #006600; */
+}
+#yonghu{
+	width: 278px;
+	height: 68px;
+	/* background-color: pink; */
+}
+#yonghu img{
+	float: left;
+	margin-right: 10px;
+}
+#yonghu span{
+	width: 220px;
+	display: block;
+	float: left;
+	font-size: 16px;
+	color: #000000;
+	padding: 3px 0px;
+}
+#yonghu span:nth-child(3){
+	font-size: 12px;
+	color: #8b8b8b;
+}
+
+#xinzhuce{
+	width: 278px;
+	height: 40px;
+	margin-top: 40px;
+	background-color: #000000;
+	text-align: center;
+	line-height: 40px;
+}
+#xinzhuce a{
+	font-size: 12px;
+	color: #FFFFFF;
+}
